@@ -81,9 +81,9 @@ window.addEventListener("DOMContentLoaded", function(){
 
 	function getCheckboxValue(){
 		if($('fav').checked){
-			favoriteValue = $('fav').value;
+			siteValue = $('fav').value;
 		}else{
-			favoriteValue = "No";
+			siteValue = "No";
 		}
 	}
 
@@ -129,9 +129,8 @@ window.addEventListener("DOMContentLoaded", function(){
 			item.hp				= ["Horse Power:", 	$('hp').value];
 			item.adder			= ["Adder:", 		$('adder').value];
 			item.tranny			= ["Transmission:", 	trannyValue];
-			item.favorite		= ["Referred from:", 	favoriteValue];
+			item.favorite		= ["Referred from:", 	siteValue];
 			item.comments		= ["Comments:", 	$('comments').value];
-
 
 			// save data stringify
 			localStorage.setItem(id, JSON.stringify(item));
@@ -187,7 +186,7 @@ window.addEventListener("DOMContentLoaded", function(){
 		hpr = ["--Horse Power--", "400HP", "500HP", "600HP", "700HP", "800HP", "900HP", "1000HP", "1000HP+"],
 		adders = ["--Power Adders--", "Nitrous Stage 1", "Nitrous Stage 2", "Nitrous Direct Port", "Nitrous Dry Kit", "--Forced Induction--", "Single Turbo", "Twin Turbo", "Single Turbo Meth", "Twin Turbo Race Fuel", "--Supercharged--", "Supercharged F1", "Supercharged F2", "Supercharged F3", "Supercharged F4"],
 		trannyValue
-		favoriteValue = "No"
+		siteValue = "No"
 		;
 
 	// calling the functions for the populated option drop downs
