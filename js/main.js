@@ -80,8 +80,8 @@ window.addEventListener("DOMContentLoaded", function(){
 	}
 
 	function getCheckboxValue(){
-		if($('fav').checked){
-			siteValue = $('fav').value;
+		if($('ltech').checked){
+			siteValue = $('ltech').value;
 		}else{
 			siteValue = "No";
 		}
@@ -129,7 +129,7 @@ window.addEventListener("DOMContentLoaded", function(){
 			item.hp				= ["Horse Power:", 	$('hp').value];
 			item.adder			= ["Adder:", 		$('adder').value];
 			item.tranny			= ["Transmission:", 	trannyValue];
-			item.favorite		= ["Referred from:", 	siteValue];
+			item.ltech			= ["Referred from:", 	siteValue];
 			item.comments		= ["Comments:", 	$('comments').value];
 
 			// save data stringify
