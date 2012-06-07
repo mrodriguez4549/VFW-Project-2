@@ -161,7 +161,7 @@ window.addEventListener("DOMContentLoaded", function(){
 
 			for(var n in obj){
 				var makeSubli = document.createElement('li');
-				makeSubList.appendChild(makeSubli);
+				makeSublist.appendChild(makeSubli);
 				var optSubText = obj[n][0]+" "+obj[n][1];
 				makeSubli.innerHTML = optSubText;
 			} 

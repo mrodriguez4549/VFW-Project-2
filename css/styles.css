@@ -11,10 +11,6 @@ body {
 	background-color: #fff;
 	font-family: Arial, "Helvetica", sans-serif;
 }
-/* style for my content div */
-#content {
-	border-radius: 10px;
-}
 /* h1 tag styling */
 h1 {
 	color: #fff;
@@ -54,6 +50,8 @@ a:hover {
 }
 
 /* form styles start here */
+
+
 /* fieldset styles */
 fieldset {
 		width: auto;
@@ -64,9 +62,6 @@ fieldset {
 		line-height: 140%;
 		
 	}
-label {
-	/* display: block; */
-}
 /* legend tag styles */
 legend {
 	font-size: 16px;
@@ -93,6 +88,7 @@ textarea {
 	color: #fff;
 	font-size: 12px;
 }
+/* clearn data & display data buttons styles */
 .bttn {
     border: none;
    	background-color: red;
