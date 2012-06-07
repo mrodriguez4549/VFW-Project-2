@@ -68,7 +68,7 @@ window.addEventListener("DOMContentLoaded", function(){
 		selectLi.appendChild(makeSelect);
 	}
 
-	// redio buttons
+	// function for radio buttons
 
 	function getSelectedRadio(){
 		var radios = document.forms[0].tranny;
@@ -78,6 +78,8 @@ window.addEventListener("DOMContentLoaded", function(){
 			}
 		}
 	}
+
+	// function for checkbox option 
 
 	function getCheckboxValue(){
 		if($('ltech').checked){
@@ -97,7 +99,7 @@ window.addEventListener("DOMContentLoaded", function(){
 				$('displayLink').style.display 	= "none";
 				$('addNew').style.display 		= "inline";
 				break;
-
+					// off
 			case "off":
 				$('contactForm').style.display  = "block";
 				$('clear').style.display 		= "inline";
@@ -112,11 +114,11 @@ window.addEventListener("DOMContentLoaded", function(){
 	}
 
 	// stored data function
-
+	// stores all object data
 		function storeData(){
-		var id 					= Math.floor(Math.random()*100000001);
-		getSelectedRadio();
-		getCheckboxValue();
+		var id 					= Math.floor(Math.random()*100000001); // math that randomly picks a number to attach to the string
+		getSelectedRadio(); // calling the select radio function
+		getCheckboxValue(); // checkbox value function
 		var item  				= {};
 			item.fname			= ["First Name:", 	$('fname').value];
 			item.lname			= ["Last Name:", 	$('lname').value];
@@ -141,7 +143,7 @@ window.addEventListener("DOMContentLoaded", function(){
 	function getData(){
 		toggleControls("on");
 		if(localStorage.length ===0){
-			alert("There is no data in local storage.");
+			alert("There is no data in local storage."); // alert
 		}
 		var makeDiv = document.createElement('div');
 		makeDiv.setAttribute("id", "items");
@@ -172,7 +174,7 @@ window.addEventListener("DOMContentLoaded", function(){
 
 	function clearLocal(){
 		if(localStorage.length === 0){
-			alert("Nothing to delete.");
+			alert("Nothing to delete."); // alert
 		}else{
 			localStorage.clear();
 			alert("All Data Deleted");
@@ -181,12 +183,12 @@ window.addEventListener("DOMContentLoaded", function(){
 		}
 	}
 
-	//Variable Defaults
+	// array data for the drop down fucnctions called 
 	var fast = ["--ET Time--", "12's", "11's", "10's", "9's", "8's", "7's"],
 		hpr = ["--Horse Power--", "400HP", "500HP", "600HP", "700HP", "800HP", "900HP", "1000HP", "1000HP+"],
 		adders = ["--Power Adders--", "Nitrous Stage 1", "Nitrous Stage 2", "Nitrous Direct Port", "Nitrous Dry Kit", "--Forced Induction--", "Single Turbo", "Twin Turbo", "Single Turbo Meth", "Twin Turbo Race Fuel", "--Supercharged--", "Supercharged F1", "Supercharged F2", "Supercharged F3", "Supercharged F4"],
-		trannyValue
-		siteValue = "No"
+		trannyValue // transmission value
+		siteValue = "No" // site value 
 		;
 
 	// calling the functions for the populated option drop downs
@@ -194,13 +196,13 @@ window.addEventListener("DOMContentLoaded", function(){
 		powerAmount();
 		powerAdders();	
 
-	//Set Link Submit Click Events
+	//this displays the data
 	var displayLink = $("displayLink");
 	displayLink.addEventListener("click", getData);
-
+	// clears local data event
 	var clearLink = $("clear");
 	clearLink.addEventListener("click", clearLocal);
-
+	// submits stored data event 
 	var save = $("submit");
 	save.addEventListener("click", storeData);
 
